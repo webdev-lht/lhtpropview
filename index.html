@@ -52,56 +52,58 @@
         <div class="row filter-container">
 
             <!--- ======== Acreage Filter Card ======= --->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Acreage</h5>
-                    <!---<div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="selectAllAcreageCheckbox">
-                        <label class="form-check-label" for="selectAllAcreageCheckbox">Select All Acreage</label>
-                    </div>--->
-                    <div class="form-check">
-                        <input class="form-check-input acreage-filter" type="checkbox" value="20-50" id="acreage1">
-                        <label class="form-check-label" for="acreage1">20-50 Acres</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input acreage-filter" type="checkbox" value="51-100" id="acreage2">
-                        <label class="form-check-label" for="acreage2">51-100 Acres</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input acreage-filter" type="checkbox" value="101-150" id="acreage3">
-                        <label class="form-check-label" for="acreage3">101-150 Acres</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input acreage-filter" type="checkbox" value="151-200" id="acreage4">
-                        <label class="form-check-label" for="acreage4">151-200 Acres</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input acreage-filter" type="checkbox" value="201+" id="acreage5">
-                        <label class="form-check-label" for="acreage5">201+ Acres</label>
-                    </div>
+            
+                
+            <div class="col-md-3 col-lg-2" id="acreagefilter">
+                <h5 class="card-title">Acreage</h5>
+                <!---<div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="selectAllAcreageCheckbox">
+                    <label class="form-check-label" for="selectAllAcreageCheckbox">Select All Acreage</label>
+                </div>--->
+                <div class="form-check">
+                    <input class="form-check-input acreage-filter" type="checkbox" value="20-50" id="acreage1">
+                    <label class="form-check-label" for="acreage1">20-50 Acres</label>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input acreage-filter" type="checkbox" value="51-100" id="acreage2">
+                    <label class="form-check-label" for="acreage2">51-100 Acres</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input acreage-filter" type="checkbox" value="101-150" id="acreage3">
+                    <label class="form-check-label" for="acreage3">101-150 Acres</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input acreage-filter" type="checkbox" value="151-200" id="acreage4">
+                    <label class="form-check-label" for="acreage4">151-200 Acres</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input acreage-filter" type="checkbox" value="201+" id="acreage5">
+                    <label class="form-check-label" for="acreage5">201+ Acres</label>
+                </div>  
             </div>
 
             <!--- ======= County Filter Card ======= --->
             <div class="col-md-3 col-lg-2">
-                <div class="checkbox-box">
-                    <h5 class="box-title">County</h5>
-                    <select class="form-select" id="countyDropdown">
-                        <option value="all">All Counties</option>
-                        <option value="none">Select None</option>
-                        <option value="austin">Austin</option>
-                        <option value="bell">Bell</option>
-                        <option value="bertram">Bertram</option>
-                        <option value="libertyhill">Liberty Hill</option>
-                        <option value="sealy">Sealy</option>
-                        <option value="schulenberg">Schulenberg</option>
-                        <option value="williamson">Williamson</option>
-                    </select>
+                <div class="card mb-4">
+                    <div class="checkbox-box">
+                        <h5 class="box-title">County</h5>
+                        <select class="county-select" id="countyDropdown">
+                            <option value="All">All Counties</option>
+                            <option value="None">Select None</option>
+                            <option value="Austin">Austin</option>
+                            <option value="Bell">Bell</option>
+                            <option value="Bertram">Bertram</option>
+                            <option value="Libertyhill">Liberty Hill</option>
+                            <option value="Sealy">Sealy</option>
+                            <option value="Schulenberg">Schulenberg</option>
+                            <option value="Williamson">Williamson</option>
+                        </select>
+                    </div>
                 </div> 
             </div>
 
             <!--- ======= School District ======= --->
-            <div class="col-md-3 col-lg-2">
+            <!--- <div class="col-md-3 col-lg-2">
                 <div class="checkbox-box">
                     <h5 class="box-title">School District</h5>
                     <div class="form-check">
@@ -117,19 +119,21 @@
                         <label class="form-check-label" for="highSchool">High School</label>
                     </div>
                 </div>
-            </div>
+            </div>--->
             <!--- ====== Maximum Distance Input Field ======= --->
-            <div class="col-md-3 col-lg-2">
+            <!---<div class="col-md-3 col-lg-2">
                 <div class="checkbox-box">
                     <h5 class="box-title">Maximum Distance (miles)</h5>
                     <input type="number" id="maxDistance" class="form-control" placeholder="Enter maximum distance">
                 </div>
             </div>
-        </div>
-        <!--- ======= Show MLS Results Button ======= --->
-        <div class="row mt-3">
-            <div class="col-md-12">
+        </div>--->
+
+        <!--- ======= The Buttons ======= --->
+        <div class="button-container">
+            <div class="row mt-3">
                 <button id="showResultsBtn" class="btn btn-primary">Show MLS Results</button>
+                <button id="clearResultsButton" class="btn btn-warning">Clear Results</button>
             </div>
         </div>
         <!--- ======= Filtered Results Field ======= --->
@@ -161,28 +165,7 @@
     <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
 
-    <!--- Firebase JS module imports --->
-
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
-        import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js';
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyDIuRu_pdlpzvWnKbQCbjgDH21xSLP0yg8",
-            authDomain: "lhtpropview-e559d.firebaseapp.com",
-            databaseURL: "https://lhtpropview-e559d-default-rtdb.firebaseio.com",
-            projectId: "lhtpropview-e559d",
-            storageBucket: "lhtpropview-e559d.firebasestorage.app",
-            messagingSenderId: "683220233918",
-            appId: "1:683220233918:web:a178f37f9f5f5159d7f8ef"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-
-        // You can add the Firebase data retrieval and filtering functions here
-    </script>
-
+    <!--- The JS Scripts --->
     <script type="module" src="./app.js"></script>
     <script type="module" src="./script.js"></script>
     
