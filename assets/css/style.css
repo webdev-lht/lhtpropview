@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --background-color: #f8f9fa;
+    --card-bg-color: #f9f9f9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 20px;
+}
+
+.app-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #2d3a3f;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#acreagefilter {
+        border: 1px solid #ddd;
+        border-color: var(--primary-color);
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 1rem;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        color: #333;
+        width: 30%;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/*Individual filter*/
+
+.checkbox-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-box h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.checkbox-box .form-check input {
+    margin-right: 10px;
+}
+
+.checkbox-box .form-check label {
+    font-weight: 500;
+}
+
+/*Results field and Show MLS Button*/
+
+.results-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#results-list {
+    font-size: 16px;
+    color: #333;
+}
+
+#results-list p {
+    margin: 0;
+    padding: 5px; 
+}
+
+.filter-box {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-box .box-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+#countyFilter {
+    border: 1px solid #ddd;
+    border-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    color: #333;
+    width: 50%;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #333;
+}
+
+#maxDistance {
+    max-width: 150px;
+}
+
+.filter-box:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#countyFilter:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="number"], .form-select {
+    margin-top: 10px;
+}
+
+/* The Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#showResultsBtn {
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    gap: 1rem;
+    margin: 10px;
+}
+
+#clearResultsBtn {
+    gap: 1rem;
+    padding: 10px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    max-width: 10px;
+    margin: 10px;
+}
+
+#clearResultsBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* End of Buttons */
+
+#runCMAButton {
+    padding: 10px 20px;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-box {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .filter-box .box-title {
+        font-size: 1rem;
+    }
+
+    .form-check {
+        margin-bottom: 8px;
+    }
+}
