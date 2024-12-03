@@ -82,14 +82,12 @@ document.addEventListener('DOMContentLoaded', function() {
         properties.forEach(property => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${property.property_MLS}</td>
+                <td>${property.property_MLS_Number}</td>
                 <td>${property.property_Acres}</td>
                 <td>${property.property_DOM}</td>
                 <td>${property.property_County}</td>
                 <td>${property.property_Address}</td>
-                <td>${property.property_ElementarySchool}</td>
-                <td>${property.property_MiddleSchool}</td>
-                <td>${property.property_HighSchool}</td>
+                <td>${property.property_School_District}</td>
             `;
             resultsList.appendChild(row);
         });
